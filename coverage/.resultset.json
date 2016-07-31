@@ -1,0 +1,111 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/notmarkmiranda/projects/mentorship/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/helpers/posses_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/pages_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/posses_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/models/posse.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/sessions_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1470005170
+  }
+}
