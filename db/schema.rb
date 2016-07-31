@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160731164722) do
+ActiveRecord::Schema.define(version: 20160731205030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,10 +27,12 @@ ActiveRecord::Schema.define(version: 20160731164722) do
     t.string   "email"
     t.string   "bio"
     t.string   "picture"
-    t.integer  "posse_id"
+    t.integer  "posse_id",   default: 1
     t.string   "slack_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "uid"
+    t.string   "token"
     t.index ["posse_id"], name: "index_users_on_posse_id", using: :btree
   end
 
