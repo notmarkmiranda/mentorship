@@ -13,9 +13,12 @@ RSpec.feature "User can create a new mentor account" do
 
     click_button "Create Profile"
 
-    click_link "Browse Mentors"
+    expect(current_path).to eq(mentors_path)
+
+    expect(page).to have_selector(".mentor-panel", count: 1)
 
     expect(page).to have_content(user.name)
     expect(page).to have_content("Denver")
+    expect(page).to have_content(timezone.name)
   end
 end

@@ -11,4 +11,18 @@ class MentorsController < ApplicationController
     @mentor = Mentor.new
     @timezones = MentorTimezone.all
   end
+
+  def create
+    @mentor = Mentor.new(mentor_params)
+    @mentor.user_id = current_user.id
+    if @mentor.save
+      redirect_to mentors_path
+    end
+  end
+
+  private
+
+  def mentor_params
+    params.require(:mentor).permit(:location, :mentor_timezone_id)
+  end
 end
