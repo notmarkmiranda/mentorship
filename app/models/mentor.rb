@@ -18,4 +18,12 @@ class Mentor < ApplicationRecord
   def picture
     user.picture
   end
+
+  def email
+    user.email
+  end
+
+  def slack_name
+    user.slack_name
+  end
 end
