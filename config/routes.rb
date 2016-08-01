@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'mentors/index'
+
   root "pages#index"
   get "/how", to: "pages#show", as: :how
   get "/dashboard", to: "users#show", as: "dashboard"
 
   resources :users, except: [:new, :show]
+  resources :mentors, only: [:index, :show]
   resources :posses
 
   get "/lets-go", to: "users#new", as: "lets_go"
