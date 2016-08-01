@@ -26,7 +26,7 @@ RSpec.describe UsersController, type: :controller do
     updated_user = User.find(@user.id)
     expect(response.status).to eq 302
     expect(assigns(:user)).to eq(@user)
-    expect(response).to redirect_to(@user)
+    expect(response).to redirect_to(dashboard_path)
     expect(updated_user.email).to eq("test@example.com")
   end
 

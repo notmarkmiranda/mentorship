@@ -11,10 +11,10 @@
       <li><%= link_to "Browse Students", root_path %></li>
       <li><%= link_to "Browse Mentors", root_path %></li>
       <% if current_user %>
-        <li><%= link_to "Dashboard", "#" %></li>
-        <li><%= link_to "Sign Out", "#" %></li>
+        <li><%= link_to "Dashboard", dashboard_path %></li>
+        <li><%= link_to "Sign Out", logout_path %></li>
       <% else %>
-        <li><%= link_to "Sign Up", new_user_path %></li>
+        <li><%= link_to "Sign Up or Log In", lets_go_path %></li>
       <% end %>
       <!-- <li>{{#link-to 'students'}}Browse Students{{/link-to}}</li>
       <li>{{#link-to 'mentors'}}Browse Mentors{{/link-to}}</li>
