@@ -1,0 +1,2 @@
+class MentorTimezone < ApplicationRecord
+end
