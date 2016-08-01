@@ -48,7 +48,7 @@ body {
 
 .banner-image {
   height: 990px;
-  background-image: url('/assets/mentorship.png');
+  background-image: image-url('/assets/mentorship.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -187,5 +187,5 @@ section.page-header {
 
 .form-group > span {
   color: red;
-  
+
 }
