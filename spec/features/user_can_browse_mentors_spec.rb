@@ -2,9 +2,13 @@ require "rails_helper"
 
 RSpec.feature "User can browse mentors" do
   scenario "They see all of the mentors on the page" do
-    mentors = create_list(:mentors, 3)
+    mentors = create_list(:mentor, 3)
 
-    visit mentors_path
+    visit root_path
+
+    click_link "Browse Mentors"
+
+    expect(current_path).to eq(mentors_path)
 
     expect(page).to have_selector("mentor", count: 3)
 
