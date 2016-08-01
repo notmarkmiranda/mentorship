@@ -9,5 +9,6 @@ class MentorsController < ApplicationController
 
   def new
     @mentor = Mentor.new
+    @timezones = MentorTimezone.all
   end
 end
