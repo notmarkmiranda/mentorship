@@ -16,6 +16,14 @@
         1,
         0,
         null,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/notmarkmiranda/projects/mentorship/app/helpers/application_helper.rb": [
@@ -36,6 +44,9 @@
       ],
       "/Users/notmarkmiranda/projects/mentorship/app/controllers/users_controller.rb": [
         1,
+        1,
+        1,
+        null,
         1,
         null,
         null,
@@ -140,6 +151,6 @@
         0
       ]
     },
-    "timestamp": 1470025604
+    "timestamp": 1470026805
   }
 }
