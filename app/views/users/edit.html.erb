@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default navbar-opaque">
+  <%= render partial: "shared/navbar" %>
+</nav>
+
+
+<div class="container services-container">
+  <div class="row">
+    <div class="col-md-12 services-header">
+      PROFILE
+      <div>
+        We need a few more thin's to complete ye profile.
+        <!-- These are the things we do. -->
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="well col-md-4 col-md-offset-4">
+      <%= form_for @user do |f| %>
+      <div class="form-group">
+        <span>*</span><%= f.label :email, "E-Mail: " %>
+        <%= f.text_field :email, placeholder: "E-Mail Address", class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <span>*</span><%= f.label :bio, "Bio: " %>
+        <%= f.text_area :bio, class: "form-control", placeholder: "Taking stock: you've got a pistol with only one shot, a compass that doesn't point north ... and no ship. You are without a doubt the worst pirate I have ever heard of.", rows: 5 %>
+      </div>
+      <div class="form-group">
+        <span>*</span><%= f.label :slack_name, "Slack Name: " %>
+        <%= f.text_field :slack_name, class: "form-control", placeholder: "@something" %>
+        <span>*required</span>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Complete Profile", class: "btn btn-turing btn-lg btn-block", id:"complete-profile" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+</script>
