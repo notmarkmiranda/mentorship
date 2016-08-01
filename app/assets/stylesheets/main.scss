@@ -1,0 +1,191 @@
+$turing-blue: #05c2d1;
+$raleway: 'Raleway', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+body {
+  font-family: $raleway
+}
+
+.navbar.navbar-clear {
+  background-color: transparent;
+  border: 0px none;
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: $roboto;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  size: 4px;
+  color: white;
+  &:hover {
+    color: #777;
+  }
+  &:active {
+    color: #fff;
+  }
+  &.active {
+    color: $turing-blue;
+  }
+}
+
+.navbar-brand {
+  color: white !important;
+  letter-spacing: 3px;
+  font-family: $raleway;
+  size: 4px;
+  text-shadow: 2px 2px 10px #000;
+  & > span {
+    color: $turing-blue;
+    letter-spacing: 3px;
+    font-weight: 700;
+  }
+}
+
+.navbar-opaque {
+  background-color: rgba(30 , 30, 30, 1);
+}
+
+.banner-image {
+  height: 990px;
+  background-image: url('/assets/mentorship.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  margin-top: -50px;
+  z-index: -100;
+}
+
+.banner-text {
+  text-shadow: 2px 2px 4px #000;
+  text-align: right;
+  color: white;
+  font-family: $raleway;
+  font-size: 48px;
+  padding-top: 300px;
+  & > div {
+    font-size: 20px;
+    text-shadow: 2px 2px 20px $turing-blue;
+    text-transform: uppercase;
+    margin-top: -5px;
+  }
+}
+
+.services-container {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 18px;
+}
+
+i {
+  width: 75px;
+  height: 75px;
+  padding: 18px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  &.first {
+    background-color: $turing-blue;
+    color: white;
+  }
+  &.second {
+    background-color: $turing-blue;
+    color: white;
+  }
+  &.third {
+    background-color: $turing-blue;
+    color: white;
+  }
+}
+
+.services-header {
+  font-family: $raleway;
+  font-size: 64px;
+  & > div {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 28px;
+    color: #777;
+    margin-top: -15px;
+    padding-bottom: 40px;
+    font-style: italic;
+  }
+}
+
+.services-description {
+  color: #888;
+}
+
+.sign-up-section {
+  text-align: center;
+  & > span {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    &.muted-text {
+      font-size: 14px;
+      color: #888;
+      // text-transform: none;
+      font-weight: 200;
+    }
+  }
+}
+
+i.fa.fa-github-square {
+  margin: 0;
+  padding: 0;
+  height: 25px;
+}
+
+.btn-turing {
+  background-color: $turing-blue;
+  color: white;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+  &:active{
+    color: $turing-blue;
+    background-color: black;
+  }
+}
+
+.mentor-panel {
+  margin-bottom: 10px;
+  height: 550px;
+}
+
+.panel {
+  border-radius: 0px;
+}
+
+section.page-header {
+  text-align: center;
+  font-family: 'Raleway'
+  h1 {
+    color: red;
+  }
+}
+
+.index-image {
+  padding: 0px;
+}
+
+.mentor-name {
+  text-align: center;
+  font-size: 36px;
+  font-family: $raleway;
+  color: $turing-blue;
+}
+
+.mentor-info {
+  padding-top: 50px;
+  font-size: 16px;
+  font-family: $raleway
+}
+
+.form-group > span {
+  color: red;
+  
+}

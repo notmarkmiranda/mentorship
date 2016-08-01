@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default navbar-opaque">
+  <%= render partial: "shared/navbar" %>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="well col-md-6 col-md-offset-3 sign-up-section">
+      <span class="primary">Sign-up with your Github Account Today!</span>
+      <span class="muted-text">Something less important goes here.</span>
+      <hr>
+      <%= link_to login_path, class:"btn btn-turing btn-lg github-signup" do %>
+        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
