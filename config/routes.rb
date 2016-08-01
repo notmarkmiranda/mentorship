@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root "pages#index"
+  get "/how", to: "pages#show", as: :how
   get "/dashboard", to: "users#show", as: "dashboard"
 
   resources :users, except: [:new, :show]
