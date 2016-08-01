@@ -13,7 +13,6 @@ Posse.create(name: "No Posse", bio: "Default posse choice")
     bio: "Former Student, current mentor!"
   )
   mentor.mentor_timezone = MentorTimezone.new(name: "MT")
-  mentor.mentor_timezone = timezone
   user = User.new(
     uid: n,
     token: "#{n}",
