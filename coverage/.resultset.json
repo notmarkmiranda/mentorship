@@ -10,6 +10,10 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Josh/turing/projects/mentorship/app/controllers/application_controller.rb": [
@@ -204,6 +208,6 @@
         0
       ]
     },
-    "timestamp": 1470085733
+    "timestamp": 1470085811
   }
 }
