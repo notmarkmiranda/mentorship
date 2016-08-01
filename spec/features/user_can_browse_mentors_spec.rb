@@ -10,12 +10,12 @@ RSpec.feature "User can browse mentors" do
 
     expect(current_path).to eq(mentors_path)
 
-    expect(page).to have_selector("mentor", count: 3)
+    expect(page).to have_selector(".mentor-panel", count: 3)
 
     mentors.each do |mentor|
       expect(page).to have_content(mentor.user.name)
       expect(page).to have_content(mentor.location)
-      expect(page).to have_content(mentor.user.email)
+      expect(page).to have_content(mentor.mentor_timezone.name)
     end
   end
 end
