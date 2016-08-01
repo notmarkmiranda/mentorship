@@ -1,6 +1,7 @@
 $(document).ready(function(){
   disableButton();
   checkForCompletion();
+  typeCheckForCompletion();
 })
 
 function disableButton(){
@@ -8,20 +9,23 @@ function disableButton(){
 }
 
 function checkForCompletion(){
-  $('form > div > input').keyup(function() {
+  var empty = false;
+  var inputs = $('form > div > input')
+  inputs.each(function(){
+    if ($(this).val().length < 1){
+      empty = true
+    }
+  });
+  if (empty) {
+      $('#complete-profile').prop('disabled', true);
+  } else {
+      $('#complete-profile').removeAttr('disabled');
+  }
+}
 
-      var empty = false;
-
-      $('form > div > input').each(function() {
-          if ($(this).val().length < 1) {
-              empty = true;
-          }
-      });
-
-      if (empty) {
-          $('#complete-profile').prop('disabled', true); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-      } else {
-          $('#complete-profile').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-      }
+function typeCheckForCompletion(){
+  var inputs = $('form > div > input')
+  inputs.keyup(function(){
+    checkForCompletion();
   });
 }

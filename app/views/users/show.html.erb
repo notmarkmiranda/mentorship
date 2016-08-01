@@ -1,3 +1,22 @@
-<p><%= @user.name %></p>
-<p><%= @user.uid %></p>
-<p><%= @user.token %></p>
+<nav class="navbar navbar-default navbar-opaque">
+  <%= render partial: "shared/navbar" %>
+</nav>
+<div class="container services-container">
+  <div class="row">
+    <div class="col-md-12 services-header">
+      DASHBOARD
+      <div>
+        These are the dashboard things
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="well col-md-6 col-md-offset-3">
+      <p>Name: <%= @user.name %></p>
+      <p>E-Mail:<%= @user.email %></p>
+      <p>User ID:<%= @user.uid %></p>
+      <p><%= @user.token %></p>
+      <%= link_to "Edit Profile", edit_user_path(current_user), class:"btn btn-turing" %>
+    </div>
+  </div>
+</div>

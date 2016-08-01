@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_user, except: [:new]
+  before_action :redirect_user, only: [:new]
+
   def new
   end
 
@@ -13,7 +16,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to @user
+      redirect_to dashboard_path
     else
       render :edit
     end
