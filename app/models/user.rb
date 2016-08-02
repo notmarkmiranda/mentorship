@@ -15,4 +15,7 @@ class User < ApplicationRecord
     user.save
     user
   end
+
+  def student_or_mentor
+  end
 end

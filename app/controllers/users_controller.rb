@@ -11,11 +11,14 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @cohorts = Cohort.all
   end
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
+    user = params[:user]
+    if @user.update(email: user[:email], bio: user[:bio], slack_name: user[:slack_name])
+      @user.student_or_mentor(user[:student_or_mentor])
       redirect_to dashboard_path
     else
       render :edit
@@ -25,7 +28,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :bio, :slack_name, :name)
+    params.require(:user).permit(:email, :bio, :slack_name, :name, :student_or_mentor)
   end
 
 end
