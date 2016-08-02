@@ -7,9 +7,15 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
       <li><%= link_to "How does it work?", root_path %></li>
       <li><%= link_to "Browse Students", students_path %></li>
       <li><%= link_to "Browse Mentors", root_path %></li>
+=======
+      <li><%= link_to "How does it work?", how_path %></li>
+      <li><%= link_to "Browse Students", root_path %></li>
+      <li><%= link_to "Browse Mentors", mentors_path %></li>
+>>>>>>> master
       <% if current_user %>
         <li><%= link_to "Dashboard", dashboard_path %></li>
         <li><%= link_to "Sign Out", logout_path %></li>
