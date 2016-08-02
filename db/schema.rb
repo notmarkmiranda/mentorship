@@ -12,12 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20160801161259) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-
   create_table "cohorts", force: :cascade do |t|
+  end
 
   create_table "mentor_timezones", force: :cascade do |t|
     t.string   "name"
@@ -34,7 +33,6 @@ ActiveRecord::Schema.define(version: 20160801161259) do
     t.datetime "updated_at",         null: false
     t.index ["mentor_timezone_id"], name: "index_mentors_on_mentor_timezone_id", using: :btree
     t.index ["user_id"], name: "index_mentors_on_user_id", using: :btree
-
   end
 
   create_table "posses", force: :cascade do |t|
@@ -65,12 +63,9 @@ ActiveRecord::Schema.define(version: 20160801161259) do
     t.index ["posse_id"], name: "index_users_on_posse_id", using: :btree
   end
 
-
-  add_foreign_key "students", "cohorts"
-  add_foreign_key "students", "users"
-
   add_foreign_key "mentors", "mentor_timezones"
   add_foreign_key "mentors", "users"
-
+  add_foreign_key "students", "cohorts"
+  add_foreign_key "students", "users"
   add_foreign_key "users", "posses", column: "posse_id"
 end
