@@ -8,7 +8,6 @@ RSpec.describe Mentor, type: :model do
 
   describe "Validations" do
     it { is_expected.to validate_presence_of :location }
-    it { is_expected.to validate_presence_of :bio }
     it { is_expected.to validate_presence_of :mentor_timezone }
     it { is_expected.to validate_presence_of :user }
   end

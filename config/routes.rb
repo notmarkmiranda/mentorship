@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get "/dashboard", to: "users#show", as: "dashboard"
 
   resources :users, except: [:new, :show]
-  resources :students, only: [:index, :new, :create, :edit]
-  resources :mentors, only: [:index, :show]
+  resources :students, only: [:index, :show, :new, :create, :edit]
+  resources :mentors, only: [:index, :show, :new, :create]
   resources :posses
 
   get "/lets-go", to: "users#new", as: "lets_go"
