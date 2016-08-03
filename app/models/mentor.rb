@@ -3,7 +3,6 @@ class Mentor < ApplicationRecord
   belongs_to :mentor_timezone
 
   validates :location, presence: true
-  validates :bio, presence: true
   validates :mentor_timezone, presence: true
   validates :user, presence: true
 

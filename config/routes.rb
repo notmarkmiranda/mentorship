@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "/dashboard", to: "users#show", as: "dashboard"
 
   resources :users, except: [:new, :show]
-  resources :mentors, only: [:index, :show]
+  resources :mentors, only: [:index, :show, :new, :create]
   resources :posses
 
   get "/lets-go", to: "users#new", as: "lets_go"
