@@ -11,6 +11,16 @@ class Student < ApplicationRecord
     user.picture
   end
 
+  def email
+    user.email
+  end
 
+  def slack_name
+    user.slack_name
+  end
+
+  def bio
+    user.bio
+  end
 
 end
