@@ -13,9 +13,9 @@ function enableButton(){
 }
 
 function checkForCompletion(){
-  var inputs = $('#user_email, #user_bio, #user_slack_name, #user_student_or_mentor, #user_student_or_mentor, #user_cohort')
+  var inputs = $('#user_email, #user_bio, #user_slack_name')
   var empty = findEmpty(inputs);
-  
+
   empty ? disableButton() : enableButton()
 }
 
@@ -31,7 +31,7 @@ function findEmpty(inputs){
 }
 
 function typeCheckForCompletion(){
-  var inputs = $('#user_email, #user_bio, #user_slack_name, #user_student_or_mentor, #user_student_or_mentor, #user_cohort')
+  var inputs = $('#user_email, #user_bio, #user_slack_name')
 
   inputs.on('keyup change focus', function(){
     roleCheck();

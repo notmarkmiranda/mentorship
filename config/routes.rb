@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "/dashboard", to: "users#show", as: "dashboard"
 
   resources :users, except: [:new, :show]
-  resources :students, only: [:index]
+  resources :students, only: [:index, :new, :create, :edit]
   resources :mentors, only: [:index, :show]
   resources :posses
 

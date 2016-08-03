@@ -1,18 +1,30 @@
 <nav class="navbar navbar-default navbar-opaque">
   <%= render partial: "shared/navbar" %>
 </nav>
-<div class="container services-container">
-  <div class="row">
-    <div class="col-md-12 services-header">
-      STUDENTS
-      <div>
-        These are our students!
-      </div>
+
+<div class="container">
+  <section class="page-header">
+    <h1>STUDENTS</h1>
+    Here's are our registered students! Click to get details!
+  </section>
+  <% @students.each do |student| %>
+  <div class="col-md-4 mentor-panel">
+    <div class="panel panel-default">
+      <ul class="list-group">
+        <li class="list-group-item profile-image"><%= image_tag student.picture %></li>
+        <li class="list-group-item">
+          <h4 class="list-group-item-heading mentor-name"><%= student.name %></h4>
+        </li>
+        <li class="list-group-item">
+          <h4 class="list-group-item-heading">
+            Cohort: <%= student.cohort.id %>
+          </h4>
+        </li>
+        <li class="list-group-item">
+          <p class="list-group-item-text"><%= link_to "View details about #{student.name}", "#" %></p>
+        </li>
+      </ul>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      
-    </div>
-  </div>
+  <% end %>
 </div>

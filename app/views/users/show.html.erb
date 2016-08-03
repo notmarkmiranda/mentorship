@@ -11,12 +11,43 @@
     </div>
   </div>
   <div class="row">
-    <div class="well col-md-6 col-md-offset-3">
-      <p>Name: <%= @user.name %></p>
-      <p>E-Mail:<%= @user.email %></p>
-      <p>User ID:<%= @user.uid %></p>
-      <p><%= @user.token %></p>
-      <%= link_to "Edit Profile", edit_user_path(current_user), class:"btn btn-turing" %>
-    </div>
+    <ul class="list-group col-md-4 col-md-offset-4">
+      <li class="list-group-item profile-image"><%= image_tag @user.picture %></li>
+      <li class="list-group-item">Name: <b><%= @user.name %></b></li>
+      <li class="list-group-item">
+        E-Mail:
+        <% if @user.email %>
+          <b><%= @user.email %></b>
+        <% else %>
+          <%= link_to "complete your profile", edit_user_path(current_user), class: "profile-highlight" %>
+        <% end %>
+      </li>
+      <li class="list-group-item">
+        Bio:
+        <% if @user.bio %>
+          <b><%= @user.bio %></b>
+        <% else %>
+          <%= link_to "complete your profile", edit_user_path(current_user), class: "profile-highlight" %>
+        <% end %>
+      </li>
+       <% if @user.student %>
+       <li class="list-group-item">
+         Cohort:
+         <b><%=  @user.student.cohort.id %></b>
+       </li>
+       <% end %>
+      <li class="list-group-item button-section">
+        <p>Do things:</p>
+        <section><%= link_to "Edit Profile", edit_user_path(current_user), class:"btn btn-turing btn-section" %></section>
+        <section>
+        <% if @user.student %>
+          <%= link_to "Edit Student Profile", edit_student_path(current_user), class:"btn btn-turing btn-section" %>
+        <% else %>
+          <%= link_to "Create Student Profile", new_student_path, class:"btn btn-turing btn-section" %>
+        <% end %>
+        </section>
+        <section><%= link_to "Create Mentor Profile", edit_user_path(current_user), class:"btn btn-turing btn-section" %></section>
+      </li>
+    </ul>
   </div>
 </div>

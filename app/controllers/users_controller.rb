@@ -18,9 +18,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     user = params[:user]
     if @user.update(email: user[:email], bio: user[:bio], slack_name: user[:slack_name])
-      @user.student_or_mentor(user[:student_or_mentor])
+      flash[:success] = "Your profile has been updated!"
       redirect_to dashboard_path
     else
+      require 'pry'; binding.pry
       render :edit
     end
   end
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :bio, :slack_name, :name, :student_or_mentor)
+    params.require(:user).permit(:email, :bio, :slack_name, :name)
   end
 
 end

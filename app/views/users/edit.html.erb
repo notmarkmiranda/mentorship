@@ -16,8 +16,6 @@
   <div class="row">
     <div class="well col-md-4 col-md-offset-4">
       <%= form_for @user do |f| %>
-      <%= content_tag :span, class:"hidden cohort-info", data:{ cohorts: @cohorts } do %>
-      <% end %>
       <div class="update-profile">
         <div class="form-group">
           <span>*</span><%= f.label :email, "E-Mail: " %>
@@ -31,10 +29,6 @@
           <span>*</span><%= f.label :slack_name, "Slack Name: " %>
           <%= f.text_field :slack_name, class: "form-control", placeholder: "@something" %>
         </div>
-        <div class="form-group">
-          <span>*</span><%= f.label :student_or_mentor, "Are you a student or a mentor?" %>
-          <%= f.select(:student_or_mentor, ["Choose One", "Student", "Mentor"], {}, {class: "form-control"})  %>
-        </div>
       </div>
       <div class="form-group">
         <span>*required</span>
@@ -46,7 +40,3 @@
     </div>
   </div>
 </div>
-
-
-
-</script>
