@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-opaque">
+  <%= render partial: "shared/navbar" %>
+</nav>
+
+
+<div class="container services-container">
+  <div class="row">
+    <div class="col-md-12 services-header">
+      STUDENT PROFILE
+      <div>
+        Do the things.
+        <!-- These are the things we do. -->
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="well col-md-4 col-md-offset-4">
+      <%= form_for @student do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+      <div class="form-group">
+        <%= f.collection_select :cohort_id, Cohort.all, :id, :id, { prompt: "Choose your cohort" }, { class:"form-control" }  %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Create Student Profile", class: "btn btn-turing btn-lg btn-block", id: "complete-student" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

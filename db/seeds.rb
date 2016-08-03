@@ -7,6 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Posse.create(name: "No Posse", bio: "Default posse choice")
 
+Cohort.create(id: 1602)
+Cohort.create(id: 1603)
+Cohort.create(id: 1605)
+Cohort.create(id: 1606)
+Cohort.create(id: 1608)
+Cohort.create(id: 1610)
+
+
 20.times do |n|
   mentor = Mentor.new(
     location: "Denver",
@@ -16,13 +24,13 @@ Posse.create(name: "No Posse", bio: "Default posse choice")
   user = User.new(
     uid: n,
     token: "#{n}",
-    name: "mentor #{n}",
+    name: "Mentor #{n}",
     email: "mentor#{n}@turing.io",
     slack_name: "mentor#{n}",
     picture: "https://avatars2.githubusercontent.com/u/14855129?v=3&s=460"
   )
   mentor.user = user
   result = mentor.save
-  puts "Saving mentor #{n + 1} - result: #{result}"
+  puts "Saving Mentor #{n + 1} - result: #{result}"
   puts mentor.errors.full_messages.join(', ') unless result
 end

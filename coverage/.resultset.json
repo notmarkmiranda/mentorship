@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Josh/turing/projects/mentorship/app/controllers/mentors_controller.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/mentors_controller.rb": [
         1,
         1,
         4,
@@ -31,18 +31,18 @@
         null,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/controllers/application_controller.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/application_controller.rb": [
         1,
         1,
         null,
         1,
         null,
         1,
-        4,
+        8,
         null,
         null,
         1,
-        4,
+        3,
         null,
         null,
         1,
@@ -50,23 +50,23 @@
         null,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/helpers/application_helper.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/helpers/mentors_helper.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/helpers/mentors_helper.rb": [
         1,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/helpers/posses_helper.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/helpers/posses_helper.rb": [
         1,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/helpers/users_helper.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/controllers/pages_controller.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/pages_controller.rb": [
         1,
         1,
         null,
@@ -75,11 +75,44 @@
         null,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/controllers/posses_controller.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/posses_controller.rb": [
         1,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/controllers/users_controller.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/students_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -93,26 +126,40 @@
         null,
         1,
         1,
-        null,
-        null,
-        1,
-        2,
-        2,
-        1,
-        null,
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
         null,
         1,
         null,
         1,
-        2,
+        0,
         null,
         null,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/models/mentor.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/models/cohort.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/models/mentor.rb": [
         1,
         1,
         1,
@@ -142,22 +189,46 @@
         null,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/Josh/turing/projects/mentorship/app/models/mentor_timezone.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/models/mentor_timezone.rb": [
         1,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/models/posse.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/models/posse.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/models/user.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/models/student.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/notmarkmiranda/projects/mentorship/app/models/user.rb": [
+        1,
         1,
         1,
         1,
@@ -175,24 +246,22 @@
         1,
         1,
         null,
+        null,
         null
       ],
-      "/Users/Josh/turing/projects/mentorship/app/channels/application_cable/channel.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/Josh/turing/projects/mentorship/app/channels/application_cable/connection.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/Josh/turing/projects/mentorship/app/controllers/sessions_controller.rb": [
-        0,
-        0,
-        0,
+      "/Users/notmarkmiranda/projects/mentorship/app/controllers/sessions_controller.rb": [
         0,
         0,
         0,
@@ -211,17 +280,17 @@
         0,
         0
       ],
-      "/Users/Josh/turing/projects/mentorship/app/jobs/application_job.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/jobs/application_job.rb": [
         0,
         0
       ],
-      "/Users/Josh/turing/projects/mentorship/app/mailers/application_mailer.rb": [
+      "/Users/notmarkmiranda/projects/mentorship/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1470088380
+    "timestamp": 1470240866
   }
 }

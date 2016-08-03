@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :uid, presence: true, uniqueness: true
   validates :name, presence: true
   validates :picture, presence: true
+  has_one :student
   belongs_to :posse
 
   def self.find_or_create_from_auth(auth)
@@ -15,4 +16,5 @@ class User < ApplicationRecord
     user.save
     user
   end
+
 end

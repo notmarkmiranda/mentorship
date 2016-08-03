@@ -11,13 +11,17 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @cohorts = Cohort.all
   end
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
+    user = params[:user]
+    if @user.update(email: user[:email], bio: user[:bio], slack_name: user[:slack_name])
+      flash[:success] = "Your profile has been updated!"
       redirect_to dashboard_path
     else
+      require 'pry'; binding.pry
       render :edit
     end
   end

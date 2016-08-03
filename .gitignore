@@ -18,4 +18,6 @@
 
 # Ignore application configuration
 /config/application.yml
-/coverage
+
+# ignore coverage
+coverage

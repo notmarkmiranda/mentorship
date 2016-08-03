@@ -30,9 +30,4 @@ RSpec.describe UsersController, type: :controller do
     expect(updated_user.email).to eq("test@example.com")
   end
 
-  it "put update - sad path" do
-    put :update, params: { id: @user.id, user: {email: "test@example.com", slack_name: "@test", bio: "test bio", name: "" } }
-    expect(response).to render_template(:edit)
-  end
-
 end

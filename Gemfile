@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faraday'
 gem 'figaro'
 gem 'omniauth-github'
-
+gem 'table_print'
 
 group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'

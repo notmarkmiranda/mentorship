@@ -24,7 +24,7 @@
       <div class="form-group">
         <span>*</span><%= f.label :timezone, "Time Zone: " %>
         <%= f.select :mentor_timezone_id, options_from_collection_for_select(@timezones, "id", "name"),
-          :prompt => "Select field", class: "form-control" %>
+          {:prompt => "Select field"}, {class: "form-control"} %>
       </div>
       <div class="form-group">
         <span>*required</span><br />
