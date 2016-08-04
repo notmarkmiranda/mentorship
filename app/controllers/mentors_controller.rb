@@ -1,6 +1,6 @@
 class MentorsController < ApplicationController
   def index
-    @mentors = Mentor.all
+    @mentors = Mentor.where(active true)
   end
 
   def show
