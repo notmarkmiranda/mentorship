@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :mentors, only: [:index, :show, :new, :create]
   resources :posses
 
+  get "/deactivate-student", to: "students#deactivate", as: "deactivate_student"
+  get "/activate-student", to: "students#activate", as: "activate_student"
   get "/lets-go", to: "users#new", as: "lets_go"
   get "/logout", to: "sessions#destroy", as: "logout"
   get "/auth/github", as: "login"

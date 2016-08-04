@@ -17,4 +17,12 @@ class User < ApplicationRecord
     user
   end
 
+  def deactivate_profile
+    student.update(active: false)
+  end
+
+  def activate_profile
+    student.update(active: true)
+  end
+
 end

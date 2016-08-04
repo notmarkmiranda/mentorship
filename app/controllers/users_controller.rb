@@ -21,7 +21,6 @@ class UsersController < ApplicationController
       flash[:success] = "Your profile has been updated!"
       redirect_to dashboard_path
     else
-      require 'pry'; binding.pry
       render :edit
     end
   end

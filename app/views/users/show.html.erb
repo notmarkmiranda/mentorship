@@ -33,15 +33,17 @@
        <% if @user.student %>
        <li class="list-group-item">
          Cohort:
-         <b><%=  @user.student.cohort.id %></b>
+         <b><%= @user.student.cohort.id %></b>
        </li>
        <% end %>
       <li class="list-group-item button-section">
         <p>Do things:</p>
         <section><%= link_to "Edit Profile", edit_user_path(current_user), class:"btn btn-turing btn-section" %></section>
         <section>
-        <% if @user.student %>
-          <%= link_to "Edit Student Profile", edit_student_path(current_user), class:"btn btn-turing btn-section" %>
+        <% if @user.student && @user.student.active %>
+          <%= link_to "Deactivate Student Profile", deactivate_student_path(id: current_user.id), class:"btn btn-turing btn-section" %>
+        <% elsif @user.student && !@user.student.active %>
+          <%= link_to "Activate Student Profile", activate_student_path(id: current_user.id), class:"btn btn-turing btn-section" %>
         <% else %>
           <%= link_to "Create Student Profile", new_student_path, class:"btn btn-turing btn-section" %>
         <% end %>
