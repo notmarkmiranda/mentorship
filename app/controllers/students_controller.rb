@@ -25,14 +25,14 @@ class StudentsController < ApplicationController
   end
 
   def deactivate
-    if User.find(params[:id]).deactivate_profile
-      flash[:warning] = "Your profile was deactivated."
+    if User.find(params[:id]).deactivate_student_profile
+      flash[:danger] = "Your profile was deactivated."
       redirect_to dashboard_path
     end
   end
 
   def activate
-    if User.find(params[:id]).activate_profile
+    if User.find(params[:id]).activate_student_profile
       flash[:success] = "Your profile was activated."
       redirect_to dashboard_path
     end
