@@ -341,3 +341,21 @@ sal_user = User.new(
 sal.user = sal_user
 sal.save
 puts "Saving #{sal_user.name}"
+
+# sal
+thom = Mentor.new(
+  location: "Denver",
+  bio: "I'm Sal. 1602's fearless leader. Student turned TA"
+)
+thom.mentor_timezone = MentorTimezone.find_or_create_by(name: "MT")
+thom_user = User.new(
+  uid: 12347,
+  token: "cdsfa",
+  name: "Thom S.",
+  email: "thom@thom.io",
+  slack_name: "@s-espinosa",
+  picture: "https://avatars0.githubusercontent.com/u/15093580?v=3&s=400"
+)
+thom.user = thom_user
+thom.save
+puts "Saving #{thom_user.name}"
