@@ -20,6 +20,20 @@ class MentorsController < ApplicationController
     end
   end
 
+  def activate
+    if User.find(params[:id]).activate_mentor_profile
+      flash[:success] = "Your profile was activated"
+      redirect_to dashboard_path
+    end
+  end
+
+  def deactivate
+    if User.find(params[:id]).deactivate_mentor_profile
+      flash[:danger] = "Your profile was deactivated"
+      redirect_to dashboard_path
+    end
+  end
+
   private
 
   def mentor_params

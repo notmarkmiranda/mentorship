@@ -48,7 +48,16 @@
           <%= link_to "Create Student Profile", new_student_path, class:"btn btn-turing btn-section" %>
         <% end %>
         </section>
-        <section><%= link_to "Create Mentor Profile", new_mentor_path(current_user), class:"btn btn-turing btn-section" %></section>
+
+        <section>
+          <% if @user.mentor && @user.mentor.active %>
+            <%= link_to "Deactivate Mentor Profile", deactivate_mentor_path(id: current_user.id), class:"btn btn-turing btn-section" %>
+          <% elsif @user.mentor && !@user.mentor.active %>
+            <%= link_to "Activate Mentor Profile", activate_mentor_path(id: current_user.id), class: "btn btn-turing btn-section" %>
+          <% else %>
+            <%= link_to "Create Mentor Profile", new_mentor_path(current_user), class: "btn btn-turing btn-section" %>
+          <% end %>
+        </section>
       </li>
     </ul>
   </div>

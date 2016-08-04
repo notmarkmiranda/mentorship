@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get "/deactivate-student", to: "students#deactivate", as: "deactivate_student"
   get "/activate-student", to: "students#activate", as: "activate_student"
+  get "/deactivate-mentor", to: "mentors#deactivate", as: "deactivate_mentor"
+  get "/activate-mentor", to: "mentors#activate", as: "activate_mentor"
   get "/lets-go", to: "users#new", as: "lets_go"
   get "/logout", to: "sessions#destroy", as: "logout"
   get "/auth/github", as: "login"
