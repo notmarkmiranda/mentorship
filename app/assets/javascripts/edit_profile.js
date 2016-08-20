@@ -47,7 +47,6 @@ function roleCheck(){
   $('.add-on').remove()
   if (select === "Student") {
     $('.update-profile').append(studentForm())
-    // $('#user_cohort').append('<option value="Choose One">Choose One</option>')
     $.each(cohorts, function(index, cohort){
       $('#user_cohort').append('<option value="' + cohort.id + '">' + cohort.id + '</option>')
     })

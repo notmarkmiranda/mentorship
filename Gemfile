@@ -31,6 +31,7 @@ end
 
 group :test do
   gem 'simplecov', require: false
+  gem 'launchy'
   gem 'rails-controller-testing'
 end
 

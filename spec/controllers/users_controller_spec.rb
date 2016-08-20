@@ -4,7 +4,7 @@ RSpec.describe UsersController, type: :controller do
   before do
     posse = Posse.create(name: "No Posse")
     @user = User.create(uid: 17, name: "Mark Miranda", picture: "test", posse_id: posse.id)
-    ApplicationController.any_instance.stub(:current_user).and_return(@user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end
 
   it "get show" do
@@ -21,8 +21,8 @@ RSpec.describe UsersController, type: :controller do
     expect(response).to render_template(:edit)
   end
 
-  it "put update" do
-    put :update, params: { id: @user.id, user: { email: "test@example.com", slack_name: "@test", bio: "test bio" } }
+  it "patch update" do
+    patch :update, params: { id: @user.id, user: { email: "test@example.com", slack_name: "@test", bio: "test bio" } }
     updated_user = User.find(@user.id)
     expect(response.status).to eq 302
     expect(assigns(:user)).to eq(@user)

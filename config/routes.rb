@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'mentors/index'
+
 
   root "pages#index"
   get "/how", to: "pages#show", as: :how

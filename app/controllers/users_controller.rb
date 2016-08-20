@@ -20,8 +20,6 @@ class UsersController < ApplicationController
     if @user.update(email: user[:email], bio: user[:bio], slack_name: user[:slack_name])
       flash[:success] = "Your profile has been updated!"
       redirect_to dashboard_path
-    else
-      render :edit
     end
   end
 

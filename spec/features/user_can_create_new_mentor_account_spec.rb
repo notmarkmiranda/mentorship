@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "User can create a new mentor account" do
   scenario "The information is updated and they are taken back to their dashboard" do
     user = create(:user)
-    ApplicationController.any_instance.stub(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     timezone = create(:mentor_timezone)
 
     visit new_mentor_path
