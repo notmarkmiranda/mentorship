@@ -55,7 +55,7 @@
           <% elsif @user.mentor && !@user.mentor.active %>
             <%= link_to "Activate Mentor Profile", activate_mentor_path(id: current_user.id), class: "btn btn-turing btn-section" %>
           <% else %>
-            <%= link_to "Create Mentor Profile", new_mentor_path(current_user), class: "btn btn-turing btn-section" %>
+            <%= link_to "Create Mentor Profile", new_mentor_path, class: "btn btn-turing btn-section" %>
           <% end %>
         </section>
       </li>

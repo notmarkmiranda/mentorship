@@ -2,11 +2,13 @@
   <div class="container banner-text">
     PIRATES YE BE WARNED
     <div>mentoring opportunites abound</div>
-    <div class="btn btn-turing">
-      Sign up as a Mentor!
-    </div>
-    <div class="btn btn-turing">
-      Sign up as a Student!
-    </div>
+    <% if !current_user || !(current_user.mentor || current_user.student if current_user) %>
+      <div class="btn btn-turing">
+        Sign up as a Mentor!
+      </div>
+      <div class="btn btn-turing">
+        Sign up as a Student!
+      </div>
+    <% end %>
   </div>
 </div>
